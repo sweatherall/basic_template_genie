@@ -3,7 +3,6 @@
 **A simple node-driven genie that will grant simple template wishes.**
 
 ![genie logo](/imgs/genie.png)
-Format: ![Alt Text](url)
 
 Currently, there is a single grantable wish: _create a basic skeleton project._
 
