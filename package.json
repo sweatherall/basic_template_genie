@@ -1,0 +1,27 @@
+{
+  "name": "basic_template_genie",
+  "version": "1.0.0",
+  "description": "A template genie that will grant your template wishes.",
+  "main": "creation.js",
+  "scripts": {
+    "grant-wish": "node ./genie_magic/creation.js",
+    "summon-genie": "npm run grant-wish && live-server --port=3333 ./wish_granted"
+  },
+  "keywords": [
+    "genie",
+    "magic",
+    "basic",
+    "template",
+    "generator"
+  ],
+  "author": "s.weatherall",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "fs-extra": "^5.0.0",
+    "live-server": "^1.2.0",
+    "markdown-it": "^8.4.0",
+    "nodemon": "^1.14.11",
+    "normalize.css": "^7.0.0"
+  }
+}
