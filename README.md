@@ -1,8 +1,8 @@
 ## Basic Template Genie ##
 
-**A simple node-driven genie that will grant simple template wishes.**
-
 ![genie logo](/imgs/genie.png)
+
+**A simple node-driven genie that will grant simple template wishes.**
 
 Currently, there is a single grantable wish: _create a basic skeleton project._
 
