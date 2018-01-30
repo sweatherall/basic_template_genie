@@ -32,7 +32,7 @@ module.exports = {
               :''
             :this.defaultMeta.scripts.map(value => `<script src="${value}"></script>`)
         }
-        <link rel="icon" type="image/png" href="${pageMeta.favicon || this.defaultMeta.favicon}">
+        <link rel="icon" href="${pageMeta.favicon || this.defaultMeta.favicon}">
       </head>
       <body>
         ${md.render(pageContent)}
@@ -43,13 +43,13 @@ module.exports = {
   defaultMeta: {
     lang: 'en',
     title: 'Δ.Δ.Δ',
-    stylesheets: ['./css/styles.css'],
-    scripts: ['./js/main.js'],
+    stylesheets: ['./wish_assets/css/styles.css'],
+    scripts: ['./wish_assets/js/main.js'],
     charset: 'utf-8',
     description: 'made with magic',
     keywords: '',
     author: 's.weatherall',
-    favicon: './imgs/favicon/favicon-32x32.png',
+    favicon: './wish_assets/imgs/favicon/favicon.ico',
     viewport: 'width=device-width, initial-scale=1',
     extra: []
   }

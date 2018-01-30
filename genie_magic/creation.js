@@ -5,7 +5,7 @@ var creationTemplate = require('./creation_template.js');
 // paths relative to `package.json`
 var grantableWishesPath = './grantable_wishes';
 var grantableWishesMetaPath = './grantable_wishes__meta';
-var wishAssets = ['./imgs', './css', './js'];
+var wishAssets = ['./wish_assets/imgs', './wish_assets/css', './wish_assets/js'];
 var wishGrantedPath = './wish_granted';
 
 console.log('template genie summoned...');
