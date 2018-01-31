@@ -1,6 +1,6 @@
 ## Basic Template Genie ##
 
-![genie logo](/imgs/genie.png)
+![genie logo](wish_assets/imgs/genie.png)
 
 **A simple node-driven genie that will grant simple template wishes.**
 
