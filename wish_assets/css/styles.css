@@ -1,19 +1,19 @@
 @import "./normalize.css";
 
 
-/* remove these styles :) */
+/* (: you can remove these styles :) */
 html {
   height: 100%;
   background: #000;
+  text-align: center;
 }
 h1 {
   text-align: center;
   font-size: 3em;
   font-weight: 100;
-  margin: 5em 0 0 0;
   font-style: italic;
   color: #daa520;
   text-shadow: 0px 0px 10px #daa520;
   letter-spacing: .2em;
 }
-/* remove these styles :) */
+/* (: you can remove these styles :) */
