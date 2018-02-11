@@ -5,7 +5,7 @@
   "main": "creation.js",
   "scripts": {
     "grant-wish": "node ./genie_magic/creation.js",
-    "summon-genie": "npm run grant-wish && live-server --port=3333 ./wish_granted"
+    "genie": "npm run grant-wish && live-server --port=3333 ./wish_granted"
   },
   "keywords": [
     "genie",
