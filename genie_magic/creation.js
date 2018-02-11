@@ -14,7 +14,7 @@ var grantableWishes = {}, grantableWishesMeta = {};
 console.log('template genie summoned...');
 
 // clean up the previously granted wish
-var cleanUpOldWish = function(files) {
+var expelOldWish = function(files) {
   for (var file of files) {
     fs.removeSync(path.join(wishGrantedPath, file));
   }
@@ -62,7 +62,7 @@ var revealWishes = function() {
 
 
 fs.readdir(wishGrantedPath)
-.then(cleanUpOldWish, function(err) {
+.then(expelOldWish, function(err) {
   if (err) {
     console.log('error cleaning up old wish...');
     console.log(err);
