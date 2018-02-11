@@ -14,37 +14,19 @@ console.log('template genie summoned...');
 
 fs.readdir(wishGrantedPath)
 .then(expelOldWish, function(err) {
-  if (err) {
-    console.log('error cleaning up old wish...');
-    console.log(err);
-    process.exit(1);
-  }
+  handleError(err,'error cleaning up old wish...')
 }).then(readWishes, function(err) {
-  if (err) {
-    console.log('error reading wish markdown file...');
-    console.log(err);
-    process.exit(1);
-  }
+  handleError(err,'error reading wish markdown file...')
 }).then(readWishesMeta, function(err) {
-  if (err) {
-    console.log('error reading wish json file...');
-    console.log(err);
-    process.exit(1);
-  }
+  handleError(err,'error reading wish json file...')
 }).then(grantWishes, function(err) {
-  if (err) {
-    console.log('error granting wish...');
-    console.log(err);
-    process.exit(1);
-  }
+  handleError(err,'error granting wish...')
 }).then(revealWishes, function(err) {
-  if (err) {
-    console.log('error revealing wish...');
-    console.log(err);
-    process.exit(1);
-  }
+  handleError(err,'error revealing wish...')
 }).then(function() {
   console.log('fin!');
+}).catch(function(err) {
+  handleError(err,'exception caught...')
 });
 
 
@@ -93,3 +75,12 @@ function revealWishes() {
     fs.copySync(asset, path.join(wishGrantedPath,asset));
   }
 }
+
+// fxn to handle any errors
+function handleError(err,msg) {
+  if (err) {
+    console.log(msg);
+    console.log(err);
+    process.exit(1);
+  }
+};
