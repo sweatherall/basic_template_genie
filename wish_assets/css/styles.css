@@ -16,4 +16,10 @@ h1 {
   text-shadow: 0px 0px 10px #daa520;
   letter-spacing: .2em;
 }
+img { animation: pulse 5s infinite; }
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(.95); }
+  100% { transform: scale(1); }
+}
 /* (: you can remove these styles :) */
