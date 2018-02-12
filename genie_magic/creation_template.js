@@ -1,7 +1,7 @@
-var md = require('markdown-it')();
+var md = require('markdown-it')()
 
 module.exports = {
-  createPage: function(pageContent, pageMeta = defaultMeta) {
+  createPage: function (pageContent, pageMeta = defaultMeta) {
     return `<!DOCTYPE html>
     <html lang="${pageMeta.lang || this.defaultMeta.lang}">
       <head>
@@ -12,25 +12,25 @@ module.exports = {
         <meta name="author" content="${pageMeta.author || this.defaultMeta.author}">
         ${
           pageMeta.hasOwnProperty('extra')
-            ?pageMeta.extra.length
+            ? pageMeta.extra.length
               ? pageMeta.extra.map(value => `<meta ${value}>`)
               : ''
-            :''
+            : ''
         }
         <meta name="description" content="${pageMeta.description || this.defaultMeta.description}">
         ${
           pageMeta.hasOwnProperty('stylesheets')
-            ?pageMeta.stylesheets.length
-              ?pageMeta.stylesheets.map(value => `<link rel="stylesheet" href="${value}">`)
-              :''
-            :this.defaultMeta.stylesheets.map(value => `<link rel="stylesheet" href="${value}">`)
+            ? pageMeta.stylesheets.length
+              ? pageMeta.stylesheets.map(value => `<link rel="stylesheet" href="${value}">`)
+              : ''
+            : this.defaultMeta.stylesheets.map(value => `<link rel="stylesheet" href="${value}">`)
         }
         ${
           pageMeta.hasOwnProperty('scripts')
-            ?pageMeta.scripts.length
-              ?pageMeta.scripts.map(value => `<script src="${value}"></script>`)
-              :''
-            :this.defaultMeta.scripts.map(value => `<script src="${value}"></script>`)
+            ? pageMeta.scripts.length
+              ? pageMeta.scripts.map(value => `<script src="${value}"></script>`)
+              : ''
+            : this.defaultMeta.scripts.map(value => `<script src="${value}"></script>`)
         }
         <link rel="icon" href="${pageMeta.favicon || this.defaultMeta.favicon}">
       </head>
@@ -38,7 +38,7 @@ module.exports = {
         ${md.render(pageContent)}
       </body>
     </html>
-    `;
+    `
   },
   defaultMeta: {
     lang: 'en',
